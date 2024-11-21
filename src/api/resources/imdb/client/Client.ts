@@ -47,8 +47,8 @@ export class Imdb {
             method: "POST",
             headers: {
                 "X-Fern-Language": "JavaScript",
-                "X-Fern-SDK-Name": "",
-                "X-Fern-SDK-Version": "0.0.2",
+                "X-Fern-SDK-Name": "@imdb/sdk-9754",
+                "X-Fern-SDK-Version": "0.0.5",
                 "X-Fern-Runtime": core.RUNTIME.type,
                 "X-Fern-Runtime-Version": core.RUNTIME.version,
             },
@@ -116,8 +116,8 @@ export class Imdb {
             method: "GET",
             headers: {
                 "X-Fern-Language": "JavaScript",
-                "X-Fern-SDK-Name": "",
-                "X-Fern-SDK-Version": "0.0.2",
+                "X-Fern-SDK-Name": "@imdb/sdk-9754",
+                "X-Fern-SDK-Version": "0.0.5",
                 "X-Fern-Runtime": core.RUNTIME.type,
                 "X-Fern-Runtime-Version": core.RUNTIME.version,
             },

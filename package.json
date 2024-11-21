@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "version": "0.0.2",
+    "name": "@imdb/sdk-9754",
+    "version": "0.0.5",
     "private": false,
     "repository": "https://github.com/buttonclikr/imdb-python-sdk",
     "main": "./index.js",

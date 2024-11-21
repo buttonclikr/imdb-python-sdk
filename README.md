@@ -1,14 +1,14 @@
 # Buttonclikr TypeScript Library
 
 [![fern shield](https://img.shields.io/badge/%F0%9F%8C%BF-Built%20with%20Fern-brightgreen)](https://buildwithfern.com?utm_source=github&utm_medium=github&utm_campaign=readme&utm_source=https%3A%2F%2Fgithub.com%2Fbuttonclikr%2Fimdb-python-sdk)
-[![npm shield](https://img.shields.io/npm/v/)](https://www.npmjs.com/package/)
+[![npm shield](https://img.shields.io/npm/v/@imdb/sdk-9754)](https://www.npmjs.com/package/@imdb/sdk-9754)
 
 The Buttonclikr TypeScript library provides convenient access to the Buttonclikr API from TypeScript.
 
 ## Installation
 
 ```sh
-npm i -s
+npm i -s @imdb/sdk-9754
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ npm i -s
 Instantiate and use the client with the following:
 
 ```typescript
-import { ButtonclikrApiClient } from "";
+import { ButtonclikrApiClient } from "@imdb/sdk-9754";
 
 const client = new ButtonclikrApiClient({ environment: "YOUR_BASE_URL" });
 await client.imdb.createMovie({
@@ -31,7 +31,7 @@ When the API returns a non-success status code (4xx or 5xx response), a subclass
 will be thrown.
 
 ```typescript
-import { ButtonclikrApiError } from "ButtonclikrApi";
+import { ButtonclikrApiError } from "@imdb/sdk-9754";
 
 try {
     await client.imdb.createMovie(...);
@@ -106,7 +106,7 @@ The SDK provides a way for your to customize the underlying HTTP client / Fetch 
 unsupported environment, this provides a way for you to break glass and ensure the SDK works.
 
 ```typescript
-import { ButtonclikrApiClient } from "ButtonclikrApi";
+import { ButtonclikrApiClient } from "@imdb/sdk-9754";
 
 const client = new ButtonclikrApiClient({
     ...
