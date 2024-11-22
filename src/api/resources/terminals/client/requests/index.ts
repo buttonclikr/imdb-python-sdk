@@ -1,0 +1,10 @@
+export { type GetTerminalRefsIdRequest } from "./GetTerminalRefsIdRequest";
+export { type PutTerminalRefsIdRequest } from "./PutTerminalRefsIdRequest";
+export { type DeleteTerminalRefsIdRequest } from "./DeleteTerminalRefsIdRequest";
+export { type GetTerminalRefsRequest } from "./GetTerminalRefsRequest";
+export { type PostTerminalRefsRequest } from "./PostTerminalRefsRequest";
+export { type GetTerminalsIdRequest } from "./GetTerminalsIdRequest";
+export { type PutTerminalsIdRequest } from "./PutTerminalsIdRequest";
+export { type DeleteTerminalsIdRequest } from "./DeleteTerminalsIdRequest";
+export { type GetTerminalsRequest } from "./GetTerminalsRequest";
+export { type PostTerminalsRequest } from "./PostTerminalsRequest";

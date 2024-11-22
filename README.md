@@ -16,13 +16,44 @@ npm i -s @imdb/sdk-9754
 Instantiate and use the client with the following:
 
 ```typescript
-import { ButtonclikrApiClient } from "@imdb/sdk-9754";
+import { ButtonclikrApiClient, ButtonclikrApi } from "@imdb/sdk-9754";
 
-const client = new ButtonclikrApiClient({ environment: "YOUR_BASE_URL" });
-await client.imdb.createMovie({
-    title: "string",
-    rating: 1.1,
+const client = new ButtonclikrApiClient({
+    apiKey: "YOUR_API_KEY",
+    search: "YOUR_SEARCH",
+    sessionkey: "YOUR_SESSIONKEY",
+    txnsessionkey: "YOUR_TXNSESSIONKEY",
+    username: "YOUR_USERNAME",
+    password: "YOUR_PASSWORD",
 });
+await client.accounts.postAccounts({
+    entity: "p1_ent_5a1ef5e5565631155c95344",
+    account: {
+        method: 8,
+        number: 123456789012345,
+        routing: 63013924,
+    },
+    primary: 1,
+    type: ButtonclikrApi.AccountsAddBankAccountReqBodyType.All,
+    status: 1,
+    reserved: 1,
+    currency: ButtonclikrApi.AccountsAddBankAccountReqBodyCurrency.Aed,
+    inactive: 1,
+    frozen: 1,
+});
+```
+
+## Request And Response Types
+
+The SDK exports all request and response types as TypeScript interfaces. Simply import them with the
+following namespace:
+
+```typescript
+import { ButtonclikrApi } from "@imdb/sdk-9754";
+
+const request: ButtonclikrApi.GetAccountsIdRequest = {
+    ...
+};
 ```
 
 ## Exception Handling
@@ -34,7 +65,7 @@ will be thrown.
 import { ButtonclikrApiError } from "@imdb/sdk-9754";
 
 try {
-    await client.imdb.createMovie(...);
+    await client.accounts.postAccounts(...);
 } catch (err) {
     if (err instanceof ButtonclikrApiError) {
         console.log(err.statusCode);
@@ -61,7 +92,7 @@ A request is deemed retriable when any of the following HTTP status codes is ret
 Use the `maxRetries` request option to configure this behavior.
 
 ```typescript
-const response = await client.imdb.createMovie(..., {
+const response = await client.accounts.postAccounts(..., {
     maxRetries: 0 // override maxRetries at the request level
 });
 ```
@@ -71,7 +102,7 @@ const response = await client.imdb.createMovie(..., {
 The SDK defaults to a 60 second timeout. Use the `timeoutInSeconds` option to configure this behavior.
 
 ```typescript
-const response = await client.imdb.createMovie(..., {
+const response = await client.accounts.postAccounts(..., {
     timeoutInSeconds: 30 // override timeout to 30s
 });
 ```
@@ -82,7 +113,7 @@ The SDK allows users to abort requests at any point by passing in an abort signa
 
 ```typescript
 const controller = new AbortController();
-const response = await client.imdb.createMovie(..., {
+const response = await client.accounts.postAccounts(..., {
     abortSignal: controller.signal
 });
 controller.abort(); // aborts the request

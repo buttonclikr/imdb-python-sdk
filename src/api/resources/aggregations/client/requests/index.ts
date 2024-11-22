@@ -1,0 +1,11 @@
+export { type GetAggregationResultGroupsIdRequest } from "./GetAggregationResultGroupsIdRequest";
+export { type DeleteAggregationResultGroupsIdRequest } from "./DeleteAggregationResultGroupsIdRequest";
+export { type GetAggregationResultGroupsRequest } from "./GetAggregationResultGroupsRequest";
+export { type GetAggregationResultsIdRequest } from "./GetAggregationResultsIdRequest";
+export { type DeleteAggregationResultsIdRequest } from "./DeleteAggregationResultsIdRequest";
+export { type GetAggregationResultsRequest } from "./GetAggregationResultsRequest";
+export { type GetAggregationsIdRequest } from "./GetAggregationsIdRequest";
+export { type PutAggregationsIdRequest } from "./PutAggregationsIdRequest";
+export { type DeleteAggregationsIdRequest } from "./DeleteAggregationsIdRequest";
+export { type GetAggregationsRequest } from "./GetAggregationsRequest";
+export { type PostAggregationsRequest } from "./PostAggregationsRequest";
