@@ -3,9 +3,10 @@
  */
 
 import * as errors from "../../errors/index";
+import * as ButtonclikrApi from "../index";
 
 export class BadRequestError extends errors.ButtonclikrApiError {
-    constructor(body?: unknown) {
+    constructor(body: ButtonclikrApi.Problem) {
         super({
             message: "BadRequestError",
             statusCode: 400,

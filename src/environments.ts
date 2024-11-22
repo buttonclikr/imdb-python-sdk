@@ -3,7 +3,7 @@
  */
 
 export const ButtonclikrApiEnvironment = {
-    Default: "https://api-test.bigbux.com",
+    Production: "https://api.example.com",
 } as const;
 
-export type ButtonclikrApiEnvironment = typeof ButtonclikrApiEnvironment.Default;
+export type ButtonclikrApiEnvironment = typeof ButtonclikrApiEnvironment.Production;
